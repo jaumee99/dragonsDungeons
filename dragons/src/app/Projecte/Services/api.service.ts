@@ -13,6 +13,6 @@ export class ApiService {
   }
 
   getMonsterImg(index: string) {
-    return this.http.get('https://www.dnd5eapi.co/api/images/monsters/' + index);
+    return this.http.get('https://www.dnd5eapi.co/api/images/monsters/' + index)+'.png';
   }
 }
