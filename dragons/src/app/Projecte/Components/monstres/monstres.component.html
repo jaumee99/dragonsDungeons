@@ -1,0 +1,17 @@
+<table>
+    <thead>
+        <tr>
+        <th>name</th>
+        <th>accio</th>
+    </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let monstre of monstreList">
+            <td>{{monstre.name}}</td>
+            <td>
+                <button (click)="visualitzarImg(monstre)">⚙️</button>
+                <input type="checkbox">
+            </td>
+        </tr>
+    </tbody>
+</table>
