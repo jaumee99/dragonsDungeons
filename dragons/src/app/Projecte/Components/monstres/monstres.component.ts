@@ -10,9 +10,11 @@ export class MonstresComponent implements OnInit {
 
   constructor(private apiService: ApiService) { }
   monstreList!: Array<any>;
+  monstreSeleccionat!: Array<any>;
 
   ngOnInit(): void {
     this.loadMonsters();
+    console.log(this.monstreSeleccionat);
   }
 
   public loadMonsters() {
@@ -22,8 +24,11 @@ export class MonstresComponent implements OnInit {
     );
   }
 
-  visualitzarImg(){
-
-
+  public visualitzarImg(data: any){
+    this.apiService.getMonsterImg(data).subscribe((data: any) => {
+      this.monstreSeleccionat = data;
+        }
+    );
   }
+
 }

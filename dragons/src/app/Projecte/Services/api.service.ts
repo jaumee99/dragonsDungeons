@@ -12,7 +12,7 @@ export class ApiService {
     return this.http.get('https://www.dnd5eapi.co/api/monsters');
   }
 
-  getMonsterImg(id: string) {
-    return this.http.get('https://www.dnd5eapi.co/api/monsters/' + id);
+  getMonsterImg(index: string) {
+    return this.http.get('https://www.dnd5eapi.co/api/images/monsters/' + index);
   }
 }

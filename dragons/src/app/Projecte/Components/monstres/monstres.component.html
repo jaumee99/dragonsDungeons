@@ -9,8 +9,11 @@
         <tr *ngFor="let monstre of monstreList">
             <td>{{monstre.name}}</td>
             <td>
-                <button (click)="visualitzarImg(monstre)">⚙️</button>
+                <button (click)="visualitzarImg(monstre.index)">⚙️</button>
                 <input type="checkbox">
+            </td>
+            <td>
+                <img src='https://www.dnd5eapi.co/api/images/monsters/{{monstre.index}}'>
             </td>
         </tr>
     </tbody>
